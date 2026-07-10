@@ -52,7 +52,7 @@ export default function Navbar() {
       initial={{ y: -32, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[94%] max-w-6xl"
+      className="fixed top-4 inset-x-0 mx-auto z-[100] w-[94%] max-w-6xl"
       data-testid="navbar"
     >
       <div
@@ -124,7 +124,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 6 }}
             exit={{ opacity: 0, y: -8 }}
-            className="md:hidden mt-2 rounded-2xl glass-strong p-2"
+            className="md:hidden mt-2 rounded-2xl border border-white/10 bg-[#04060D]/95 backdrop-blur-xl p-2 shadow-[0_16px_48px_rgba(0,0,0,0.6)]"
           >
             {NAV_LINKS.map((l) => (
               <button
