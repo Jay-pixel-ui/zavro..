@@ -1,5 +1,5 @@
 import { generateText } from "ai";
-import { buildSystemPrompt } from "@/lib/knowledge-base";
+import { buildSystemPrompt, localFallbackReply } from "@/lib/knowledge-base";
 
 export const maxDuration = 30;
 
@@ -60,9 +60,9 @@ export async function POST(req: Request) {
     return Response.json({ reply: text });
   } catch (error) {
     console.error("[chat] generation failed:", error);
-    return Response.json(
-      { error: "NOVA is briefly offline. Please try again shortly." },
-      { status: 502 },
-    );
+    // Graceful degradation: answer from the local knowledge base so the
+    // assistant is never fully dead if the AI Gateway is unavailable.
+    const fallback = localFallbackReply(lastMessage.text);
+    return Response.json({ reply: fallback, fallback: true });
   }
 }

@@ -1,9 +1,10 @@
 "use client";
 
-import { Instagram, Facebook, Github, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
+import { InstagramIcon, FacebookIcon, GithubIcon } from "@/components/BrandIcons";
 import { LOGO_URL, COMPANY, NAV_LINKS, SOCIAL_LINKS, CONTACT_LINKS } from "@/lib/constants";
 
-const ICONS = { instagram: Instagram, facebook: Facebook, github: Github, mail: Mail, whatsapp: MessageCircle };
+const ICONS = { instagram: InstagramIcon, facebook: FacebookIcon, github: GithubIcon, mail: Mail, whatsapp: MessageCircle };
 
 export default function Footer() {
   const year = new Date().getFullYear();

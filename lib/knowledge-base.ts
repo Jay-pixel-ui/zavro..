@@ -156,3 +156,40 @@ ${kb.businessHours}
 4. STYLE: Keep replies short — 2 to 4 sentences for most questions. Use plain text, no markdown headers or bullet walls unless listing services. End consultation-type replies with a clear next step (WhatsApp, email, or the contact form on this page).
 5. CONSULTATIONS: When someone wants a consultation, audit, or to "speak to a human", direct them to the contact form on this page, WhatsApp +65 8980 5150, or zavroai@gmail.com, and mention the 24-hour response window.`;
 }
+
+const CONTACT_LINE =
+  "For anything specific, WhatsApp us at +65 8980 5150 or email zavroai@gmail.com — a senior strategist replies within 24 hours.";
+
+/**
+ * Keyword-matched reply used when the AI model is unavailable, so NOVA
+ * degrades gracefully instead of going dark.
+ */
+export function localFallbackReply(message: string): string {
+  const q = message.toLowerCase();
+
+  if (/(price|pricing|cost|quote|quotation|budget|fee|charge|how much)/.test(q)) {
+    return `Pricing depends entirely on your project's scope and requirements, so we don't publish fixed prices. ${CONTACT_LINE}`;
+  }
+
+  if (/(contact|reach|call|phone|whatsapp|email|talk|speak|human|consult|audit|book|appointment|meeting)/.test(q)) {
+    return `You can reach the team via the contact form on this page, WhatsApp at +65 8980 5150, or email zavroai@gmail.com. Every enquiry gets a reply from a senior strategist within 24 hours.`;
+  }
+
+  if (/(hour|open|time|when|available)/.test(q)) {
+    return `We're available Monday to Friday, 9am–6pm Singapore time (GMT+8), and enquiries outside those hours are answered within 24 hours. ${CONTACT_LINE}`;
+  }
+
+  const service = KNOWLEDGE_BASE.services.find((s) =>
+    s.name.toLowerCase().split(/[^a-z]+/).some((w) => w.length > 3 && q.includes(w)),
+  );
+  if (service) {
+    return `${service.name}: ${service.description} ${CONTACT_LINE}`;
+  }
+
+  if (/(service|offer|do you|what.*(can|does)|help)/.test(q)) {
+    const names = KNOWLEDGE_BASE.services.map((s) => s.name).join(", ");
+    return `Zavro offers: ${names}. Everything is engineered as one compounding system rather than disconnected vendors. ${CONTACT_LINE}`;
+  }
+
+  return `I'm NOVA, Zavro's AI growth strategist. I can tell you about our services — AI automation, website development, branding, marketing, and more. ${CONTACT_LINE}`;
+}
