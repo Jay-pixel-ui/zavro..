@@ -53,10 +53,10 @@ export default function About() {
           >
             <motion.span
               variants={fadeUp}
-              className="font-mono-accent text-xs text-cyan-300/80"
+              className="font-mono-accent text-[11px] text-cyan-300/90"
               data-testid="about-eyebrow"
             >
-              THE PARTNER
+              [ 01 — The Partner ]
             </motion.span>
 
             <motion.h2

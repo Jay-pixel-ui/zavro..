@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { LOGO_URL } from "@/lib/constants";
+import { LOGO_MARK } from "@/lib/constants";
 
 export default function LoadingScreen() {
   const [visible, setVisible] = useState(true);
@@ -35,9 +35,9 @@ export default function LoadingScreen() {
               <div className="absolute inset-6 rounded-full border border-purple-500/20 orbit" />
 
               <motion.img
-                src={LOGO_URL}
-                alt="Zavro"
-                className="w-24 h-24 object-contain drop-shadow-[0_0_24px_rgba(0,229,255,0.6)]"
+                src={LOGO_MARK}
+                alt="Zavro Solutions"
+                className="w-28 object-contain drop-shadow-[0_0_24px_rgba(0,229,255,0.6)]"
                 initial={{ scale: 0.6, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}

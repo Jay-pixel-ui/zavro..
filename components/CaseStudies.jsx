@@ -6,45 +6,45 @@ import { IMG } from "@/lib/constants";
 
 const CASES = [
   {
-    tag: "FinTech",
-    title: "Aurora Capital — Underwriting Co-pilot",
-    desc: "Deployed a multi-agent system that pre-screens loan applications in under 90 seconds.",
+    tag: "AI Automation",
+    title: "AI Underwriting Co-pilot",
+    desc: "Multi-agent systems that pre-screen and triage inbound applications in seconds — so your team reviews decisions, not paperwork.",
     metrics: [
-      { k: "Underwriting time", v: "-72%" },
-      { k: "Approved volume", v: "+38%" },
+      { k: "Manual review time", v: "up to -70%" },
+      { k: "Throughput", v: "24/7" },
     ],
     image: IMG.dashboard,
     accent: "from-cyan-400 to-blue-500",
   },
   {
-    tag: "E-commerce",
-    title: "Nyx Apparel — Conversion OS",
-    desc: "A unified marketing + AI personalization stack across paid, owned and email channels.",
+    tag: "Web & Marketing",
+    title: "Conversion-First Storefronts",
+    desc: "A unified web, paid and lifecycle-email stack with AI personalisation — one system working toward a single pipeline target.",
     metrics: [
-      { k: "ROAS", v: "4.6×" },
-      { k: "AOV uplift", v: "+24%" },
+      { k: "Focus", v: "ROAS" },
+      { k: "Approach", v: "Full-funnel" },
     ],
     image: IMG.abstract1,
     accent: "from-amber-300 to-orange-500",
   },
   {
-    tag: "SaaS",
-    title: "Helix Health — Onboarding Autopilot",
-    desc: "Replaced manual customer onboarding with a guided AI flow, freeing 40 hrs/week.",
+    tag: "AI Receptionist",
+    title: "Onboarding & Intake Autopilot",
+    desc: "Guided AI flows that replace manual onboarding and enquiry handling — qualifying leads and booking meetings around the clock.",
     metrics: [
-      { k: "Time-to-value", v: "-58%" },
-      { k: "NPS", v: "62 → 78" },
+      { k: "Availability", v: "Always-on" },
+      { k: "Response", v: "Instant" },
     ],
     image: IMG.workflowBg,
     accent: "from-fuchsia-400 to-purple-500",
   },
   {
-    tag: "B2B Services",
-    title: "Meridian Partners — Outbound Engine",
-    desc: "Intent-driven outbound sequencing powered by Claude + first-party signal data.",
+    tag: "CRM & Growth",
+    title: "Intent-Driven Outbound Engine",
+    desc: "Signal-led outbound sequencing wired into your CRM — every lead scored, tracked and followed up without a dropped thread.",
     metrics: [
-      { k: "Meetings booked", v: "+312%" },
-      { k: "Cost per SQL", v: "-46%" },
+      { k: "Pipeline", v: "Compounding" },
+      { k: "Follow-up", v: "Zero-miss" },
     ],
     image: IMG.abstract2,
     accent: "from-cyan-300 to-emerald-400",
@@ -67,13 +67,13 @@ export default function CaseStudies() {
           className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6"
         >
           <div className="max-w-2xl">
-            <p className="font-mono-accent text-[11px] text-cyan-300/90">[ 06 — Selected Work ]</p>
+            <p className="font-mono-accent text-[11px] text-cyan-300/90">[ 06 — What We Build ]</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
               Quiet systems. <span className="gradient-text">Loud outcomes.</span>
             </h2>
           </div>
           <p className="font-mono-accent text-[10px] text-slate-400 sm:text-right">
-            * Indicative case studies — confidentiality permitting.
+            * Representative engagements. Ask us for specifics on a discovery call.
           </p>
         </motion.div>
 

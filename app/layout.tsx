@@ -25,9 +25,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://zavro.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Zavro Solutions — AI-Native Growth Partner | Singapore",
+    default: "Zavro Solutions Pte Ltd — AI-Native Growth Partner | Singapore",
     template: "%s | Zavro Solutions",
   },
+  applicationName: "Zavro Solutions",
   description:
     "Zavro is a Singapore-based growth and IT partner for founders and CMOs — website development, branding, marketing, and AI automation engineered as one compounding system.",
   keywords: [
@@ -47,13 +48,14 @@ export const metadata: Metadata = {
     title: "Zavro Solutions — AI-Native Growth Partner",
     description:
       "Brand, web, marketing and AI automation engineered as one compounding system. Based in Singapore, working worldwide.",
-    images: [{ url: "/images/logo-mark.png", width: 512, height: 512, alt: "Zavro Solutions" }],
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "Zavro Solutions Pte Ltd — Digital Growth & IT Solutions" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zavro Solutions — AI-Native Growth Partner",
     description:
       "Brand, web, marketing and AI automation engineered as one compounding system.",
+    images: ["/images/og-image.png"],
   },
   robots: { index: true, follow: true },
 };

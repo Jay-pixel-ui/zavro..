@@ -46,7 +46,7 @@ export default function Workflow() {
           transition={{ duration: 0.7 }}
           className="max-w-3xl"
         >
-          <p className="font-mono-accent text-[11px] text-cyan-300/90">[ 05 — Process ]</p>
+          <p className="font-mono-accent text-[11px] text-cyan-300/90">[ 04 — Process ]</p>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
             A <span className="gradient-text">five-step</span> path from idea to outcome.
           </h2>

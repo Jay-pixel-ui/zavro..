@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { LOGO_URL, NAV_LINKS } from "@/lib/constants";
+import { LOGO_MARK, NAV_LINKS } from "@/lib/constants";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -68,8 +68,8 @@ export default function Navbar() {
           className="flex items-center gap-2.5 magnetic"
           data-testid="logo-button"
         >
-          <div className="relative w-9 h-9 rounded-lg overflow-hidden glow-cyan">
-            <img src={LOGO_URL} alt="Zavro" className="w-full h-full object-contain" />
+          <div className="relative flex h-9 items-center rounded-lg px-1 glow-cyan">
+            <img src={LOGO_MARK} alt="Zavro Solutions" className="h-full w-auto object-contain" />
           </div>
           <span className="font-display text-[15px] tracking-[0.18em] text-white">
             ZAVRO

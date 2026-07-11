@@ -2,7 +2,7 @@
 
 import { Mail, MessageCircle } from "lucide-react";
 import { InstagramIcon, FacebookIcon, GithubIcon } from "@/components/BrandIcons";
-import { LOGO_URL, COMPANY, NAV_LINKS, SOCIAL_LINKS, CONTACT_LINKS } from "@/lib/constants";
+import { LOGO_FULL, COMPANY, NAV_LINKS, SOCIAL_LINKS, CONTACT_LINKS } from "@/lib/constants";
 
 const ICONS = { instagram: InstagramIcon, facebook: FacebookIcon, github: GithubIcon, mail: Mail, whatsapp: MessageCircle };
 
@@ -16,12 +16,12 @@ export default function Footer() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <a href="#home" className="magnetic inline-flex items-center gap-2.5">
-              <img src={LOGO_URL} alt={COMPANY.name} className="h-10 w-10 object-contain" />
-              <span className="font-display text-lg">
-                <span className="text-white">ZAVRO</span>{" "}
-                <span className="gradient-text">SOLUTIONS</span>
-              </span>
+            <a href="#home" className="magnetic inline-flex items-center" aria-label={COMPANY.legalName}>
+              <img
+                src={LOGO_FULL}
+                alt={COMPANY.legalName}
+                className="h-16 w-auto object-contain sm:h-20"
+              />
             </a>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">{COMPANY.short}</p>
 
