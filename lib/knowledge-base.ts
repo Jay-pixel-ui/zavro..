@@ -211,6 +211,30 @@ export const KNOWLEDGE_BASE = {
       q: "What AI tools do you use?",
       a: "We use a combination of leading AI platforms and build custom integrations tailored to each client's stack. We don't lock you into one vendor — we pick the best tool for the job.",
     },
+    {
+      q: "How long does a typical project take?",
+      a: "It depends on scope. A focused automation or landing page can ship in 2-4 weeks; a full brand + web + AI system typically runs 6-12 weeks. We scope timelines precisely during the discovery call so there are no surprises.",
+    },
+    {
+      q: "Do I need technical knowledge to work with Zavro?",
+      a: "Not at all. We handle the engineering end to end and explain everything in plain language. You bring the business context; we translate it into systems that work.",
+    },
+    {
+      q: "Can you integrate with my existing tools and CRM?",
+      a: "Yes — integration is one of our core strengths. We connect AI automations to the tools you already use (CRMs, calendars, email, WhatsApp, spreadsheets) rather than forcing you onto a new platform.",
+    },
+    {
+      q: "Is my business too small for AI automation?",
+      a: "Almost never. Small teams often see the biggest gains because automation replaces work they simply can't hire for yet. If you handle repeat enquiries, bookings, or follow-ups manually, there's likely a strong case.",
+    },
+    {
+      q: "Is my data safe with AI automation?",
+      a: "Yes. We build with security best practices — your data stays in your own accounts and tools, and we never train public models on your business data. We're happy to walk through specifics on a call.",
+    },
+    {
+      q: "Can the AI receptionist speak multiple languages?",
+      a: "Yes — AI receptionists can be configured for multilingual support, which is especially valuable for Singapore businesses serving English, Mandarin, Malay, and Tamil speakers.",
+    },
   ],
 
   businessHours:

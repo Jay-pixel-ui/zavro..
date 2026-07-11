@@ -36,9 +36,6 @@ export default function Testimonials() {
               className="tilt-card glass rounded-2xl p-6 sm:p-7 relative"
               data-testid={`testimonial-${i}`}
             >
-              {t.sample && (
-                <span className="sr-only">Sample testimonial for illustration purposes</span>
-              )}
               <Quote
                 size={22}
                 aria-hidden="true"
