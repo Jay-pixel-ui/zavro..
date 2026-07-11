@@ -5,9 +5,15 @@ import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motio
 import { MessageSquare, X, Send, Sparkles } from "lucide-react";
 import { IMG, NOVA } from "@/lib/constants";
 
-const QUICK_PROMPTS = ["Website Development", "Branding", "Marketing", "Social Media", "Automation", "Book Consultation"];
-const SERVICE_KEYWORDS = ["website development", "branding", "marketing", "social media", "automation"];
-const THINKING_LABELS = ["Consulting the playbook…", "Crunching the numbers…", "Lining up the angle…", "One moment…"];
+const QUICK_PROMPTS = ["AI Automation", "Website Development", "Branding", "CRM Solutions", "Marketing", "Book Consultation"];
+const SERVICE_KEYWORDS = ["ai automation", "website development", "branding", "crm solutions", "marketing", "social media"];
+const THINKING_LABELS = [
+  "Thinking…",
+  "Consulting the playbook…",
+  "Crunching the numbers…",
+  "One moment…",
+  "Pulling up the details…",
+];
 
 function Magnetic({ children, strength = 14, className = "" }) {
   const ref = useRef(null);
@@ -114,7 +120,7 @@ export default function AIChatBubble() {
         ...m,
         {
           role: "assistant",
-          text: "NOVA is briefly offline. Please try again, or reach us directly on WhatsApp at +65 8980 5150 or zavroai@gmail.com.",
+          text: "NOVA is briefly offline. Please try again, or reach us directly on WhatsApp at +65 8980 5150 or ceo@zavrosolutions.site.",
         },
       ]);
     } finally {

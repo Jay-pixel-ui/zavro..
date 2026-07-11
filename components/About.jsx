@@ -56,7 +56,7 @@ export default function About() {
               className="font-mono-accent text-[11px] text-cyan-300/90"
               data-testid="about-eyebrow"
             >
-              [ 01 — The Partner ]
+              About Zavro Solutions
             </motion.span>
 
             <motion.h2

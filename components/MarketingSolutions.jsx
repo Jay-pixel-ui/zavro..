@@ -47,7 +47,7 @@ export default function MarketingSolutions() {
           transition={{ duration: 0.7 }}
           className="max-w-3xl"
         >
-          <p className="font-mono-accent text-[11px] text-amber-300/90">[ 05 — Outcomes ]</p>
+          <p className="font-mono-accent text-[11px] text-amber-300/90">Results That Compound</p>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
             What <span className="gradient-text">growth</span> looks like with Zavro.
           </h2>

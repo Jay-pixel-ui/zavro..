@@ -108,7 +108,7 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="font-mono-accent text-xs text-cyan-300/80">START HERE</span>
+          <span className="font-mono-accent text-xs text-cyan-300/80">Get In Touch</span>
           <h2 className="font-display mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-[2.75rem]">
             Let&apos;s find out if we&apos;re <span className="gradient-text">the right fit.</span>
           </h2>

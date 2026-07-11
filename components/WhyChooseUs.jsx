@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-mono-accent text-[11px] text-cyan-300/90">[ 03 — Why Zavro ]</p>
+          <p className="font-mono-accent text-[11px] text-cyan-300/90">Why Choose Zavro</p>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
             Built like a startup. <br />
             <span className="gradient-text">Delivered like a studio.</span>

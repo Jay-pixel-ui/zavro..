@@ -67,7 +67,7 @@ export default function CaseStudies() {
           className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6"
         >
           <div className="max-w-2xl">
-            <p className="font-mono-accent text-[11px] text-cyan-300/90">[ 06 — What We Build ]</p>
+            <p className="font-mono-accent text-[11px] text-cyan-300/90">What We Build</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
               Quiet systems. <span className="gradient-text">Loud outcomes.</span>
             </h2>

@@ -175,7 +175,7 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="font-mono-accent text-[11px] text-cyan-300/90">[ 02 — Capabilities ]</span>
+          <span className="font-mono-accent text-[11px] text-cyan-300/90">Our Services</span>
           <h2 className="font-display mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-[2.75rem]">
             One team. <span className="gradient-text">Six disciplines.</span> Zero hand-offs.
           </h2>
