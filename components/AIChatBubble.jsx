@@ -160,7 +160,7 @@ export default function AIChatBubble() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.96 }}
             transition={{ duration: 0.35, ease: [0.2, 0.8, 0.2, 1] }}
-            className="glass-strong border-glow fixed bottom-24 right-4 z-[120] flex h-[560px] max-h-[80vh] w-[92vw] max-w-[400px] flex-col overflow-hidden rounded-3xl sm:right-6"
+            className="glass-strong border-glow fixed bottom-24 left-4 right-4 z-[120] flex h-[560px] max-h-[80vh] w-auto flex-col overflow-hidden rounded-3xl sm:left-auto sm:right-6 sm:w-[400px]"
             data-testid="ai-chat-panel"
             role="dialog"
             aria-label="NOVA AI assistant chat"

@@ -74,8 +74,11 @@ export default function HomeShell() {
           <Contact />
         </main>
         <Footer />
-        <AIChatBubble />
       </motion.div>
+      {/* Rendered outside the fade wrapper: animated ancestors can create a
+          containing block that breaks position:fixed, which would push the
+          bubble into page flow (e.g. below the footer). */}
+      <AIChatBubble />
     </>
   );
 }

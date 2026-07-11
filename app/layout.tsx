@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Unbounded, JetBrains_Mono } from "next/font/google";
-import { Toaster } from "sonner";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -77,7 +76,6 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         {children}
-        <Toaster theme="dark" position="bottom-center" />
       </body>
     </html>
   );

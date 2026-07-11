@@ -100,7 +100,7 @@ body { @apply bg-background text-foreground; }
 }
 
 .glass-strong {
-  background: rgba(5, 5, 10, 0.7);
+  background: rgba(4, 6, 13, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(0, 229, 255, 0.18);
@@ -148,10 +148,14 @@ body { @apply bg-background text-foreground; }
     radial-gradient(45% 40% at 60% 90%, rgba(255, 184, 0, 0.10) 0%, transparent 60%);
 }
 
-/* Animated gradient border */
+/* Animated gradient border.
+   Only force position:relative when the element isn't already positioned
+   (e.g. the fixed chat panel) — otherwise this silently overrides .fixed. */
 .border-glow {
-  position: relative;
   border-radius: 1rem;
+}
+.border-glow:not(.fixed):not(.absolute) {
+  position: relative;
 }
 .border-glow::before {
   content: "";

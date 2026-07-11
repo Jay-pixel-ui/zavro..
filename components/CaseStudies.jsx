@@ -92,6 +92,7 @@ export default function CaseStudies() {
                 <img
                   src={c.image}
                   alt={c.title}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#02040A] via-[#02040A]/40 to-transparent" />
