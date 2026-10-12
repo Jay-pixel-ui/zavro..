@@ -49,7 +49,7 @@ function Field({ label, error, children }) {
   );
 }
 
-const initialForm = { name: "", email: "", company: "", service: "", message: "" };
+const initialForm = { name: "", email: "", company: "", service: "", message: "", website: "" };
 
 /** Compose the enquiry into a readable message for WhatsApp / email. */
 function composeEnquiry(form) {
@@ -89,6 +89,20 @@ export default function Contact() {
     ev.preventDefault();
     if (!validate()) return;
     const text = composeEnquiry(form);
+    // Save the enquiry to the Zavro backend (best effort — WhatsApp below still opens either way).
+    fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        company: form.company.trim() || undefined,
+        message: form.service ? `[${form.service}] ${form.message.trim()}` : form.message.trim(),
+        source: "website",
+        website: form.website,
+      }),
+    }).catch(() => {});
     setEnquiry(text);
     setSent(true);
     setForm(initialForm);
@@ -225,6 +239,17 @@ export default function Contact() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5" data-testid="contact-form">
+                {/* Spam trap: real visitors never see or fill this. */}
+                <input
+                  type="text"
+                  name="website"
+                  value={form.website}
+                  onChange={update("website")}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                />
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <Field label="Full name" error={errors.name}>
                     <input
